@@ -1,5 +1,5 @@
 ### Moin meister 👋
 
 
-- 🔭 I’m currently working on [Party With Me](https://www.party-with-me.com)
+- 🔭 I’m currently working on [Cribber](https://app.cribber.net)
 - 📫 How to reach me: simon@koeck.dev
