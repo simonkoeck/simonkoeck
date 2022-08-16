@@ -1,5 +1,5 @@
 ### Hello World! 👋
 
 
-- 🔭 I’m currently working on [Party With Me](https://www.party-with-me.com/download)
-- 📫 How to reach me: simon@koeck.dev
+- 🔭 I’m currently working on [my portfolio](https://github.com/simonkoeck/portfolio)
+- 📫 How to reach me: simon@koeck.dev or over my [contact form](https://simon.koeck.dev/contact)
