@@ -1,12 +1,3 @@
-<div align="center">
- 
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=simonkoeck&theme=transparent)
-  
-![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=simonkoeck&theme=transparent)
-![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=simonkoeck&theme=transparent)
+Trying to make the web a little more secure.
 
-![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=simonkoeck&theme=transparent) 
-![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=simonkoeck&theme=transparent&utcOffset=2)
-
-  
-</div>
+<img src="/assets/fingerprint.svg" width="602" >
