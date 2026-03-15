@@ -45,49 +45,49 @@
 
   <g transform="translate(20, 40)">
     
-    <text x="0" y="0" class="label">BROWSER:</text>
+    <text x="0" y="0" class="label">YOUR BROWSER:</text>
     
-    <text x="100" y="0">UNKNOWN</text>
+    <text x="120" y="0">UNKNOWN</text>
 
     <g class="detector is-chrome">
-      <rect x="90" y="-15" width="150" height="20" class="mask"/>
-      <text x="100" y="0" class="result">CHROME</text>
+      <rect x="110" y="-15" width="150" height="20" class="mask"/>
+      <text x="120" y="0" class="result">CHROME</text>
     </g>
 
     <g class="detector is-safari">
-      <rect x="90" y="-15" width="150" height="20" class="mask"/>
-      <text x="100" y="0" class="result">SAFARI</text>
+      <rect x="110" y="-15" width="150" height="20" class="mask"/>
+      <text x="120" y="0" class="result">SAFARI</text>
     </g>
 
     <g class="detector is-firefox">
-      <rect x="90" y="-15" width="150" height="20" class="mask"/>
-      <text x="100" y="0" class="result">FIREFOX</text>
+      <rect x="110" y="-15" width="150" height="20" class="mask"/>
+      <text x="120" y="0" class="result">FIREFOX</text>
     </g>
 
 
-    <text x="0" y="40" class="label">SYSTEM :</text>
-    <text x="100" y="40">LINUX / OTHER</text>
+    <text x="0" y="40" class="label">YOUR SYSTEM:</text>
+    <text x="120" y="40">LINUX / OTHER</text>
 
     <g class="detector is-win">
-      <rect x="90" y="25" width="150" height="20" class="mask"/>
-      <text x="100" y="40" class="result">WINDOWS</text>
+      <rect x="110" y="25" width="150" height="20" class="mask"/>
+      <text x="120" y="40" class="result">WINDOWS</text>
     </g>
     <g class="detector is-apple">
-      <rect x="90" y="25" width="150" height="20" class="mask"/>
-      <text x="100" y="40" class="result">MACOS / iOS</text>
+      <rect x="110" y="25" width="150" height="20" class="mask"/>
+      <text x="120" y="40" class="result">MACOS / iOS</text>
     </g>
 
 
-    <text x="0" y="80" class="label">SIZE   :</text>
-    <text x="100" y="80">RESIZING...</text>
+    <text x="0" y="80" class="label">YOUR SCREEN:</text>
+    <text x="120" y="80">RESIZING...</text>
 
     <g class="detector is-mobile">
-      <rect x="90" y="65" width="150" height="20" class="mask"/>
-      <text x="100" y="80" class="result">MOBILE</text>
+      <rect x="110" y="65" width="150" height="20" class="mask"/>
+      <text x="120" y="80" class="result">MOBILE</text>
     </g>
     <g class="detector is-desktop">
-      <rect x="90" y="65" width="150" height="20" class="mask"/>
-      <text x="100" y="80" class="result">DESKTOP</text>
+      <rect x="110" y="65" width="150" height="20" class="mask"/>
+      <text x="120" y="80" class="result">DESKTOP</text>
     </g>
 
   </g>
