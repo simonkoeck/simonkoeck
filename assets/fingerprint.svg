@@ -45,7 +45,7 @@
 
   <g transform="translate(20, 40)">
     
-    <text x="0" y="0" class="label">BROWSER:</text>
+    <text x="0" y="0" class="label">YOUR BROWSER:</text>
     
     <text x="100" y="0">UNKNOWN</text>
 
@@ -65,7 +65,7 @@
     </g>
 
 
-    <text x="0" y="40" class="label">SYSTEM :</text>
+    <text x="0" y="40" class="label">YOUR SYSTEM :</text>
     <text x="100" y="40">LINUX / OTHER</text>
 
     <g class="detector is-win">
@@ -78,7 +78,7 @@
     </g>
 
 
-    <text x="0" y="80" class="label">SIZE   :</text>
+    <text x="0" y="80" class="label">YOUR SCREEN SIZE   :</text>
     <text x="100" y="80">RESIZING...</text>
 
     <g class="detector is-mobile">
