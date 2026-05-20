@@ -1,0 +1,42 @@
+<svg width="600" height="80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0d1117; }
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; fill: #c9d1d9; font-size: 14px; }
+    .prompt { fill: #3fb950; font-weight: bold; }
+    .crit { fill: #f85149; font-weight: bold; }
+    .cursor { fill: #c9d1d9; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="8" />
+
+  <defs>
+    <clipPath id="line1">
+      <rect x="0" y="0" width="0" height="22">
+        <animate attributeName="width"
+                 values="0; 0; 380; 380; 380"
+                 keyTimes="0; 0.05; 0.30; 0.95; 1"
+                 dur="9s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="line2">
+      <rect x="0" y="0" width="0" height="22">
+        <animate attributeName="width"
+                 values="0; 0; 0; 480; 480; 480"
+                 keyTimes="0; 0.05; 0.35; 0.65; 0.95; 1"
+                 dur="9s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(20, 28)" clip-path="url(#line1)">
+    <text x="0" y="0"><tspan class="prompt">$ </tspan>./hunt --target acme.com</text>
+  </g>
+
+  <g transform="translate(20, 56)" clip-path="url(#line2)">
+    <text x="0" y="0"><tspan class="crit">[CRIT] </tspan>auth bypass: POST /api/admin/users</text>
+  </g>
+
+  <rect x="20" y="62" width="8" height="2" class="cursor">
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite" />
+  </rect>
+</svg>

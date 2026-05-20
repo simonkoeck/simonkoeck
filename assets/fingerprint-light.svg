@@ -1,0 +1,77 @@
+<svg width="450" height="150" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-dim: #57606a;
+      --text-highlight: #1a7f37;
+      --font-stack: monospace;
+    }
+
+    .bg { fill: var(--bg-color); }
+    text { font-family: var(--font-stack); fill: var(--text-dim); font-size: 14px; }
+    .label { fill: #0969da; font-weight: bold; }
+
+    .detector { opacity: 0; }
+    .mask { fill: var(--bg-color); }
+    .result { fill: var(--text-highlight); font-weight: bold; }
+
+    @supports (-moz-appearance: none) {
+      .is-firefox { opacity: 1 !important; }
+    }
+    @supports (zoom: 1) {
+      .is-chrome { opacity: 1 !important; }
+    }
+    @supports (hanging-punctuation: first) {
+      .is-safari { opacity: 1 !important; }
+    }
+
+    @media (forced-colors: active) { .is-win { opacity: 1 !important; } }
+    @supports (-webkit-backdrop-filter: blur(1px)) { .is-apple { opacity: 1 !important; } }
+    @media (max-width: 600px) { .is-mobile { opacity: 1 !important; } }
+    @media (min-width: 601px) { .is-desktop { opacity: 1 !important; } }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="10" stroke="#d0d7de" stroke-width="1"/>
+
+  <g transform="translate(20, 40)">
+    <text x="0" y="0" class="label">YOUR BROWSER:</text>
+    <text x="120" y="0">UNKNOWN</text>
+
+    <g class="detector is-chrome">
+      <rect x="110" y="-15" width="150" height="20" class="mask"/>
+      <text x="120" y="0" class="result">CHROME</text>
+    </g>
+    <g class="detector is-safari">
+      <rect x="110" y="-15" width="150" height="20" class="mask"/>
+      <text x="120" y="0" class="result">SAFARI</text>
+    </g>
+    <g class="detector is-firefox">
+      <rect x="110" y="-15" width="150" height="20" class="mask"/>
+      <text x="120" y="0" class="result">FIREFOX</text>
+    </g>
+
+    <text x="0" y="40" class="label">YOUR SYSTEM:</text>
+    <text x="120" y="40">LINUX / OTHER</text>
+
+    <g class="detector is-win">
+      <rect x="110" y="25" width="150" height="20" class="mask"/>
+      <text x="120" y="40" class="result">WINDOWS</text>
+    </g>
+    <g class="detector is-apple">
+      <rect x="110" y="25" width="150" height="20" class="mask"/>
+      <text x="120" y="40" class="result">MACOS / iOS</text>
+    </g>
+
+    <text x="0" y="80" class="label">YOUR SCREEN:</text>
+    <text x="120" y="80">RESIZING...</text>
+
+    <g class="detector is-mobile">
+      <rect x="110" y="65" width="150" height="20" class="mask"/>
+      <text x="120" y="80" class="result">MOBILE</text>
+    </g>
+    <g class="detector is-desktop">
+      <rect x="110" y="65" width="150" height="20" class="mask"/>
+      <text x="120" y="80" class="result">DESKTOP</text>
+    </g>
+  </g>
+</svg>
