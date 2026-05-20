@@ -1,95 +1,66 @@
-<svg width="450" height="150" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="20" viewBox="0 0 320 20">
   <style>
-    /* --- CORE VARIABLES --- */
-    :root {
-      --bg-color: #0d1117;
-      --text-dim: #8b949e;
-      --text-highlight: #3fb950;
-      --font-stack: monospace;
+    text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-style: italic;
+      fill: #59636e;
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #9198a1; }
     }
 
-    .bg { fill: var(--bg-color); }
-    text { font-family: var(--font-stack); fill: var(--text-dim); font-size: 14px; }
-    .label { fill: #58a6ff; font-weight: bold; } 
+    .mask { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .mask { fill: #0d1117; }
+    }
 
-    /* --- THE MASKING LOGIC --- */
     .detector { opacity: 0; }
-    .mask { fill: var(--bg-color); }
-    .result { fill: var(--text-highlight); font-weight: bold; }
-
-    /* --- 1. FIREFOX (Unique) --- */
-    @supports (-moz-appearance: none) {
-      .is-firefox { opacity: 1 !important; }
-    }
-
-    /* --- 2. CHROME (Shared with Safari) --- */
-    /* Firefox does NOT support 'zoom'. Chrome and Safari DO. */
-    @supports (zoom: 1) {
-      .is-chrome { opacity: 1 !important; }
-    }
-
-    /* --- 3. SAFARI (Unique Override) --- */
-    /* Only Safari supports 'hanging-punctuation'. */
-    @supports (hanging-punctuation: first) {
-      .is-safari { opacity: 1 !important; }
-    }
-
-
+    @supports (-moz-appearance: none) { .is-firefox { opacity: 1 !important; } }
+    @supports (zoom: 1) { .is-chrome { opacity: 1 !important; } }
+    @supports (hanging-punctuation: first) { .is-safari { opacity: 1 !important; } }
     @media (forced-colors: active) { .is-win { opacity: 1 !important; } }
     @supports (-webkit-backdrop-filter: blur(1px)) { .is-apple { opacity: 1 !important; } }
     @media (max-width: 600px) { .is-mobile { opacity: 1 !important; } }
     @media (min-width: 601px) { .is-desktop { opacity: 1 !important; } }
   </style>
 
-  <rect width="100%" height="100%" class="bg" rx="10" />
+  <text x="0" y="14">reading from</text>
+  <text x="68" y="14" textLength="50" lengthAdjust="spacingAndGlyphs">unknown</text>
+  <text x="122" y="14">·</text>
+  <text x="130" y="14" textLength="72" lengthAdjust="spacingAndGlyphs">unknown</text>
+  <text x="206" y="14">·</text>
+  <text x="214" y="14" textLength="55" lengthAdjust="spacingAndGlyphs">unknown</text>
+  <text x="271" y="14">.</text>
 
-  <g transform="translate(20, 40)">
-    
-    <text x="0" y="0" class="label">YOUR BROWSER:</text>
-    
-    <text x="120" y="0">UNKNOWN</text>
+  <g class="detector is-chrome">
+    <rect x="67" y="2" width="52" height="16" class="mask"/>
+    <text x="68" y="14" textLength="50" lengthAdjust="spacingAndGlyphs">chrome</text>
+  </g>
+  <g class="detector is-safari">
+    <rect x="67" y="2" width="52" height="16" class="mask"/>
+    <text x="68" y="14" textLength="50" lengthAdjust="spacingAndGlyphs">safari</text>
+  </g>
+  <g class="detector is-firefox">
+    <rect x="67" y="2" width="52" height="16" class="mask"/>
+    <text x="68" y="14" textLength="50" lengthAdjust="spacingAndGlyphs">firefox</text>
+  </g>
 
-    <g class="detector is-chrome">
-      <rect x="110" y="-15" width="150" height="20" class="mask"/>
-      <text x="120" y="0" class="result">CHROME</text>
-    </g>
+  <g class="detector is-win">
+    <rect x="129" y="2" width="74" height="16" class="mask"/>
+    <text x="130" y="14" textLength="72" lengthAdjust="spacingAndGlyphs">windows</text>
+  </g>
+  <g class="detector is-apple">
+    <rect x="129" y="2" width="74" height="16" class="mask"/>
+    <text x="130" y="14" textLength="72" lengthAdjust="spacingAndGlyphs">macos / ios</text>
+  </g>
 
-    <g class="detector is-safari">
-      <rect x="110" y="-15" width="150" height="20" class="mask"/>
-      <text x="120" y="0" class="result">SAFARI</text>
-    </g>
-
-    <g class="detector is-firefox">
-      <rect x="110" y="-15" width="150" height="20" class="mask"/>
-      <text x="120" y="0" class="result">FIREFOX</text>
-    </g>
-
-
-    <text x="0" y="40" class="label">YOUR SYSTEM:</text>
-    <text x="120" y="40">LINUX / OTHER</text>
-
-    <g class="detector is-win">
-      <rect x="110" y="25" width="150" height="20" class="mask"/>
-      <text x="120" y="40" class="result">WINDOWS</text>
-    </g>
-    <g class="detector is-apple">
-      <rect x="110" y="25" width="150" height="20" class="mask"/>
-      <text x="120" y="40" class="result">MACOS / iOS</text>
-    </g>
-
-
-    <text x="0" y="80" class="label">YOUR SCREEN:</text>
-    <text x="120" y="80">RESIZING...</text>
-
-    <g class="detector is-mobile">
-      <rect x="110" y="65" width="150" height="20" class="mask"/>
-      <text x="120" y="80" class="result">MOBILE</text>
-    </g>
-    <g class="detector is-desktop">
-      <rect x="110" y="65" width="150" height="20" class="mask"/>
-      <text x="120" y="80" class="result">DESKTOP</text>
-    </g>
-
+  <g class="detector is-mobile">
+    <rect x="213" y="2" width="57" height="16" class="mask"/>
+    <text x="214" y="14" textLength="55" lengthAdjust="spacingAndGlyphs">mobile</text>
+  </g>
+  <g class="detector is-desktop">
+    <rect x="213" y="2" width="57" height="16" class="mask"/>
+    <text x="214" y="14" textLength="55" lengthAdjust="spacingAndGlyphs">desktop</text>
   </g>
 </svg>
-

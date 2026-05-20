@@ -39,16 +39,13 @@ SMIL animation inside an SVG, rendered as a plain markdown image. No JS, GitHub-
 
 ---
 
-## 3. Theme-aware fingerprint
+## 3. Stealth fingerprint that reads like body text
 
-`<picture>` + `prefers-color-scheme` — different SVG depending on your GitHub theme.
+Looks like a plain italic sentence. Actually live-detects your browser / OS / screen via CSS `@supports` and `@media` queries — zero JS. Theme-adapts internally.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/fingerprint.svg">
-  <img src="assets/fingerprint-light.svg" alt="fingerprint">
-</picture>
+![](assets/fingerprint.svg)
 
-**Validate:** toggle GitHub between light and dark mode (settings → appearance). The fingerprint should swap. Bonus: both variants live-detect your browser/OS/screen with zero JS — pure CSS `@supports` / `@media`.
+**Validate:** the line should read e.g. `reading from chrome · macos / ios · desktop.` and match the surrounding text color in both light and dark mode. Open in another browser to confirm it changes.
 
 ---
 
